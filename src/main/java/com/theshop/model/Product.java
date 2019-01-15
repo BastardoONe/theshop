@@ -1,10 +1,11 @@
 package com.theshop.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
+
+import javax.persistence.*;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Product {
@@ -12,12 +13,30 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String productId;
+
+    @NotEmpty(message = "The artist name must not be null")
     private String artistName;
     private String artistAlbum;
     private String artistGenrer;
+
+    @Min(value = 0 , message="Price can not be less then zero")
     private double productPrice;
     private String productStatus;
+    private String productCategory;
+
+    @Min(value = 0 , message="Product unit can not be less then zero")
     private int unitInStock;
+
+    @Transient
+    private MultipartFile productImage;
+
+    public String getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(String productCategory) {
+        this.productCategory = productCategory;
+    }
 
     public String getProductId() {
         return productId;
@@ -73,5 +92,13 @@ public class Product {
 
     public void setUnitInStock(int unitInStock) {
         this.unitInStock = unitInStock;
+    }
+
+    public MultipartFile getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(MultipartFile productImage) {
+        this.productImage = productImage;
     }
 }

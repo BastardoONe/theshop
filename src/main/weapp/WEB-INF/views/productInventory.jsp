@@ -25,8 +25,8 @@
             <tr class="bg-success">
                 <th>Photo Thumb</th>
                 <th>Product Name</th>
+                <th>Genrer</th>
                 <th>Category</th>
-                <th>Condition</th>
                 <th>Price</th>
                 <th></th>
             </tr>
@@ -37,7 +37,8 @@
                              style="width:100%"/></td>
                     <td>${product.artistName}</td>
                     <td>${product.artistAlbum}</td>
-                    <td>${product.productCondition}</td>
+                    <td>${product.artistGenrer}</td>
+                    <td>${product.productCategory}</td>
                     <td>${product.productPrice} USD</td>
                     <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
                     ><span class="glyphicon glyphicon-info-sign"></span></a>

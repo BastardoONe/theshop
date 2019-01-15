@@ -23,7 +23,10 @@
                     <h3>${product.artistAlbum}</h3>
                     <p>${product.artistName}</p>
                     <p>
-                        <strong>Category</strong> : ${product.artistGenrer}
+                        <strong>Genrer</strong> : ${product.artistGenrer}
+                    </p>
+                    <p>
+                        <strong>Category</strong> : ${product.productCategory}
                     </p>
                     <p>
                         <strong>In stock</strong> : ${product.unitInStock}

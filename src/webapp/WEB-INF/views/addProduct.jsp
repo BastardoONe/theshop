@@ -19,30 +19,20 @@
 
         <div class="form-group">
             <label for="category">Category</label>
-            <label class="checkbox-inline"><form:radiobutton path="artistAlbum" id="category"
-                                                             value="instrument" />Instrument</label>
-            <label class="checkbox-inline"><form:radiobutton path="artistAlbum" id="category"
-                                                             value="record" />Record</label>
-            <label class="checkbox-inline"><form:radiobutton path="artistAlbum" id="category"
-                                                             value="accessory" />Accessory</label>
+            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category"
+                                                             value="CD" />Instrument</label>
+            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category"
+                                                             value="Vinyl" />Record</label>
         </div>
 
         <div class="form-group">
-            <label for="description">Description</label>
-            <form:textarea path="artistGenrer" id="description" class="form-Control"/>
+            <label for="artistGenrer">Genrer</label>
+            <form:textarea path="artistGenrer" id="artistGenrer" class="form-Control"/>
         </div>
 
         <div class="form-group">
-            <label for="price">Price</label>  <form:errors path="productPrice" cssStyle="color: #ff0000;" />
-            <form:input path="productPrice" id="price" class="form-Control"/>
-        </div>
-
-        <div class="form-group">
-            <label for="condition">Condition</label>
-            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
-                                                             value="new" />New</label>
-            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
-                                                             value="used" />Used</label>
+            <label for="album">Album</label>  <form:errors path="artistAlbum"/>
+            <form:input path="artistAlbum" id="album" class="form-Control"/>
         </div>
 
         <div class="form-group">
@@ -60,8 +50,8 @@
         </div>
 
         <div class="form-group">
-            <label for="manufacturer">Manufacturer</label>
-            <form:input path="productManufacturer" id="manufacturer" class="form-Control"/>
+            <label for="price">Price</label>
+            <form:input path="productPrice" id="price" class="form-Control" cssStyle="color: #ff0000;" />
         </div>
 
         <div class="form-group">

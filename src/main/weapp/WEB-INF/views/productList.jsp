@@ -29,6 +29,7 @@
                 <th>Artist Name</th>
                 <th>Album</th>
                 <th>Genrer</th>
+                <th>Category</th>
                 <th>Price</th>
                 <th></th>
             </tr>
@@ -40,6 +41,7 @@
                     <td>${product.artistName}</td>
                     <td>${product.artistAlbum}</td>
                     <td>${product.artistGenrer}</td>
+                    <td>${product.productCategory}</td>
                     <td>${product.productPrice} USD</td>
                     <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
                     ><span class="glyphicon glyphicon-info-sign"></span></a></td>
